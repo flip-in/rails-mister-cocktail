@@ -7,10 +7,10 @@ class DosesController < ApplicationController
     @dose = Dose.find(params[:id])
   end
 
-  def new
-    @dose = Dose.new
-    @cocktail = Cocktail.find(params[:cocktail_id])
-  end
+  # def new
+  #   @dose = Dose.new
+  #   @cocktail = Cocktail.find(params[:cocktail_id])
+  # end
 
   def create
     @dose = Dose.new(dose_params)
@@ -20,7 +20,7 @@ class DosesController < ApplicationController
       redirect_to @cocktail
       flash[:notice] = "Your doses have been saved to your cocktail"
     else
-      render 'new'
+      render 'cocktails/show'
     end
   end
 

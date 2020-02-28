@@ -26,7 +26,7 @@ require 'open-uri'
   next if cocktails.nil?
   cocktails = cocktail_repo["drinks"].sample(1)
   cocktails.each do |cocktail|
-    new_cocktail = Cocktail.new(name: cocktail['strDrink'])
+    new_cocktail = Cocktail.new(name: cocktail['strDrink'], instructions: cocktail['strInstructions'])
     file = URI.open(cocktail['strDrinkThumb'])
     new_cocktail.photo.attach(io:file, filename: "#{new_cocktail.name}.jpg", content_type: 'image/jpg')
     new_cocktail.save

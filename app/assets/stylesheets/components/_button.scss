@@ -19,6 +19,7 @@
   background: #1EDD88;
   transition: background 0.3s ease;
 }
+
 .btn-flat:hover {
   background: #1BCB7F;
   color: white;
@@ -37,4 +38,8 @@
 .btn-gradient:hover {
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
+}
+
+.btn-info {
+  border-radius: 25px;
 }
