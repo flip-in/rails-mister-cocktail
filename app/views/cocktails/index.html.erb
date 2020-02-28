@@ -1,18 +1,23 @@
-<div class="container">
   <div class="banner">
-  <div class="container">
-    <h1>Happy Hour Cocktails</h1>
-    <p>What will you drink at sunset tonight?</p>
-    <a class="btn btn-flat" href="#">Browse now</a>
+    <div class="container">
+      <h1>Happy Hour Cocktails</h1>
+      <p>What will you drink at sunset tonight?</p>
+      <a class="btn btn-flat" href="#">Browse now</a>
+    </div>
   </div>
-</div>
-  <% @cocktails.each do |cocktail| %>
-    <p>
-      <%= link_to cocktail do %>
-        <%= cocktail.name %>
+  <div class="container">
+    
+    <div class="cards py-3">
+    <% @cocktails.each do |cocktail| %>
+        <%= link_to cocktail do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+            <%= cocktail.name %>
+          </div>
+        <% end %>
       <% end %>
-    </p>
-  <% end %>
-  <%= link_to "Add a new Cocktail", new_cocktail_path, class: "btn btn-primary"%>
-</div>
-
+    </div>
+  
+    <%= link_to "Add a new Cocktail", new_cocktail_path, class: "btn btn-primary"%>
+  
+  
+  </div>

@@ -1,6 +1,8 @@
 <div class="container">
   <h1 class="text-center"><%= @cocktail.name %></h1>
-  
+  <% if @cocktail.photo.attached? %>
+    <%= cl_image_tag @cocktail.photo.key %>
+  <% end %>
   <ul>
     <% @cocktail.doses.each do |dose| %>
       <li>
@@ -9,7 +11,9 @@
     <% end %>
   </ul>
 
+  <%= link_to 'delete this cocktail', cocktail_path(@cocktail), method: :delete%>
+
   <%= link_to 'add some new doses to this cocktail', new_dose_path(@cocktail) %>
   <br>
-  <%= link_to 'go back to cocktails home', cocktails_path %>
+  <%= link_to 'go back to cocktails home', root_path %>
 </div>
