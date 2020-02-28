@@ -8,6 +8,8 @@
       </li>
     <% end %>
   </ul>
-  
+
+  <%= link_to 'add some new doses to this cocktail', new_dose_path(@cocktail) %>
+  <br>
   <%= link_to 'go back to cocktails home', cocktails_path %>
 </div>
