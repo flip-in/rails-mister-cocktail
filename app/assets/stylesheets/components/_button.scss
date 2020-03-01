@@ -1,3 +1,45 @@
+.btn-primary {
+  &:hover{
+    background-color: rgb(249, 197, 89);
+    border-color: rgb(249, 197, 89);
+  }
+  .active{
+    background-color: rgba(61, 22, 51, 0.7);
+  }
+  background-color: rgba(82, 29, 68, 0.7);
+  border-color: #521D44;
+}
+
+.btn-custom {
+  background-color: rgba(82, 29, 68, 0.7);
+  border-color: #521D44;
+  color: white;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+  background-color: rgba(61, 22, 51, 0.7);
+  border-color: #2c1025;
+  color: white;
+}
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+  background-color: #521D44;
+  border-color: #521D44;
+}
+
+
 .btn-ghost {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;

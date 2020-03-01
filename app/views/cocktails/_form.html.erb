@@ -1,0 +1,7 @@
+<h2>Add ingredients to <%= @cocktail.name %></h2>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description, label: 'Amount/Measurement:'  %>
+  <%= f.association :ingredient %>
+  <%= f.submit "Confirm", class: "btn btn-custom"%>
+  <%= link_to 'Cancel', '#cancel', class: 'btn btn-custom', id: 'cancelButton' %>
+<% end %>

@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.buttons-container {
+  justify-content: center;
+}
+
+.ingredients-container {
+  .instructions {
+    border: 1.5px solid black;
+  }
+}
 .cocktail-container {
   p {
     margin-bottom: 0;
@@ -14,6 +23,7 @@
 
 .image-container {
   h1 {
+    text-align: center;
     font-family: 'Josefin Sans';
     color: white;
     margin-top: 100px;
@@ -28,12 +38,10 @@
   background-repeat: no-repeat;
   background-position: center;  
 }
-.form-container {
-  justify-content: center;
-}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
+
   .cocktail-container{
     h1 {
       font-size: 2rem;
@@ -65,6 +73,9 @@
     p {
       font-size: 1rem;
     }
+  }
+  .instructions-button {
+    margin-right: 70px !important;
   }
 }
 
