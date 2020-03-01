@@ -4,9 +4,9 @@ const show_form = () => {
   const cancel = document.querySelector('#cancelButton')
   formButton.addEventListener('click', function () {
     form.classList.toggle('d-none');
-    cancel.addEventListener('click', function () {
-      form.classList.toggle('d-done');
-    });
+  });
+  cancel.addEventListener('click', function () {
+    form.classList.toggle('d-done');
   });
 }
 
