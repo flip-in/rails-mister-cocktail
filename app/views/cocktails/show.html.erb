@@ -17,7 +17,7 @@
         </ul>
       </div>
       <div class="instructions-container col-md-5">
-        <p class="instructions"><%= @cocktail.instructions %></p>
+        <p class="instructions"><%= @cocktail.instructions || "Click \"edit\" to add instructions" %></p>
       </div>
     </div>
     <div class="buttons-container d-flex py-4 justify-content-between">
